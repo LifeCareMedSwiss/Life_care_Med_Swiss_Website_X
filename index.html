@@ -12,12 +12,14 @@
 
 /* ROOT NAV */
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 40px;
+  justify-content: center;
   align-items: center;
+  gap: 25px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 nav li {
@@ -53,8 +55,40 @@ nav a {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 /* SHOW ON HOVER */
-.dropdown:hover .dropdown-content {
-  display: flex;
+.menu-item:hover .mega-menu,
+.menu-item.open .mega-menu {
+  display: grid;
+}
+
+.mega-column {
+  min-width: 220px;
+}
+
+.mega-column h3 {
+  color: #0b2a4a;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #18b6d6;
+  padding-bottom: 5px;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  background: white;
+  z-index: 9999;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px;
+}
+
+.menu-item {
+  position: relative;
 }
 
 dropdown-menu {
@@ -137,16 +171,15 @@ header.hero {
 }
 
 .lightbox {
-    display: none;              /* zuerst unsichtbar */
-    position: fixed;            /* über alles drüber */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85); /* dunkler Hintergrund */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
 }
 
 .lightbox img {
@@ -1247,20 +1280,20 @@ function setLang(lang){
   });
 }
 
+
+
 document.addEventListener("click", function(e){
 
   const link = e.target.closest(".menu-link");
-
   if(!link) return;
 
   e.preventDefault();
 
-  const img = link.getAttribute("data-img");
+  const img = link.dataset.img;
 
   if(img){
     openLightbox(img);
   }
-
 });
 
 function detectLanguage() {
@@ -1277,13 +1310,11 @@ function detectLanguage() {
 // Auto Start beim Laden der Seite
 document.addEventListener("DOMContentLoaded", function () {
 
-  document.querySelectorAll(".has-dropdown > a").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      this.parentElement.classList.toggle("open");
-    });
+ document.querySelectorAll(".has-dropdown > a").forEach(link => {
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    this.parentElement.classList.toggle("open");
   });
-
 });
 
 function openVideoPopup(){
@@ -1416,9 +1447,6 @@ function openProductPopup(name, img){
     popup.querySelector("h3").innerText = name;
 }
 
-function closeProductPopup(){
-    document.getElementById("productPopup").classList.remove("active");
-}
 
 function render(list){
     const g = document.getElementById("grid");
@@ -1448,12 +1476,18 @@ function openLightbox(src){
   const lb = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
 
-  console.log("IMAGE PATH:", src);
+  if(!src){
+    console.warn("No image source");
+    return;
+  }
 
   img.onerror = function(){
     console.error("IMAGE NOT FOUND:", src);
   };
 
+  img.src = src;
+  lb.classList.add("active");
+}
   img.src = src;
   lb.classList.add("active");
 }
@@ -1472,22 +1506,22 @@ function closePrivacyPopup(){
 
 function showSection(id){
 
-  // alles verstecken
-  document.querySelector(".hero").style.display = "none";
-
   document.querySelectorAll(".page").forEach(sec=>{
     sec.style.display = "none";
   });
 
-document.querySelectorAll(".menu-link").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const img = link.dataset.img;
+  document.querySelector(".hero").style.display = "none";
 
-    // Beispiel: neues Fenster oder Modal
-    window.open(img, "_blank");
-  });
-});
+  const target = document.getElementById(id);
+
+  if(target){
+    target.style.display = "block";
+  } else {
+    document.querySelector(".hero").style.display = "block";
+  }
+
+  window.scrollTo(0,0);
+}
 
   // HOME
   if(id === "home"){
@@ -1509,9 +1543,7 @@ document.querySelectorAll(".menu-link").forEach(link => {
   window.scrollTo(0,0);
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-  showSection("home");
-});
+
 
 showCategory('all');
 function openRegDocsPopup(){
@@ -1679,7 +1711,13 @@ This website does not use tracking cookies...
     </p>
   </div>
 </div>
+
+<script>
+
+function closeProductPopup(){
+    document.getElementById("productPopup").classList.remove("active");
+}
+
 </script>
 
 </body>
-</html>
