@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeCare Med Swiss – PRO</title>
+
+<style>
+/* DEIN GANZES CSS HIER */
+
+/* NAV BASIC */
+
+/* ROOT NAV */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 12px;
+  display: inline-block;
+}
+
+
+/* BUTTON */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* DROPDOWN BOX */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  z-index: 9999;
+  min-width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+dropdown-menu {
+  z-index: 9999;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* COLUMN STYLE */
+.column {
+  min-width: 180px;
+}
+
+.column h4 {
+  color: #0b2a4a;
+  margin-bottom: 10px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 6px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #18b6d6;
+}
+.page {
+  display: none;
+}
+
+.column {
+  min-width: 200px;
+}
+
+.column h4 {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.column a {
+  display: block;
+  color: #333;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+
+
+header.hero {
+    display: block;
+}
+
+.popup-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    max-width:400px;
+    width:90%;
+}
+
+.popup-box button{
+    padding:10px 16px;
+    border:none;
+    background:var(--accent);
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+
+.highlight {
+    font-weight: 700;
+    color: #18b6d6;
+}
+
+.lightbox {
+    display: none;              /* zuerst unsichtbar */
+    position: fixed;            /* über alles drüber */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85); /* dunkler Hintergrund */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN CSS */
+:root{
+    --primary:#0b2a4a;
+    --secondary:#003a70;
+    --accent:#18b6d6;
+
+    --bg:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#e8f1ff;
+    --muted:#d7e6ff;
+    --shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #0b2a4a;
+}
+
+body {
+    color: #0b2a4a;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+section {
+    padding: 80px 20px;
+    background: radial-gradient(circle at top, #0b2a4a 0%, #071a2f 100%);
+    color: #e8f1ff;
+    min-height: 100vh;
+}
+
+.lang-bar {
+text-align:right;
+padding:10px 20px;
+background:var(--primary);
+color:white;
+}
+
+.lang-bar button {
+margin-left:10px;
+padding:6px 12px;
+border:none;
+cursor:pointer;
+border-radius:6px;
+background:var(--accent);
+color:white;
+font-weight:bold;
+}
+
+.lang-bar button.active {
+    background: white;
+    color: var(--primary);
+}
+
+nav {
+  background: linear-gradient(90deg,var(--primary),var(--secondary));
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 40px;
+  gap: 40px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 18px;
+}
+
+nav a:hover{
+color:var(--accent);
+}
+
+/* HERO */
+
+.hero h1{
+    color:#ffffff !important;
+}
+
+.hero p{
+    color:#d7e6ff !important;
+}
+
+.hero .contact-top{
+    color:#e8f1ff !important;
+}
+
+.hero a{
+    color:#e8f1ff !important;
+    text-decoration:none;
+}
+
+.hero {
+    background: radial-gradient(circle at top, #0b2a4a 0%, #071a2f 100%);
+    text-align:center;
+    padding:100px 20px;
+    position: relative;
+}
+
+.hero h1{
+    font-size:48px;
+    color:var(--primary);
+    letter-spacing:1px;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:18px;
+}
+
+section p,
+section li {
+color: #d7e6ff;
+}
+
+h2 {
+text-align:center;
+color:#ffffff;
+margin-bottom:30px;
+font-size:28px;
+}
+
+.category-bar {
+text-align:center;
+margin-bottom:25px;
+}
+
+.category-bar button {
+    margin: 5px;
+    padding: 10px 16px;
+    border: none;
+    background: var(--secondary);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-bar button:hover {
+    background: var(--accent);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.product-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+/* HOVER ZOOM */
+.product-card img {
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* DAS IST DEIN product-info (OVERLAY) */
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+   background: linear-gradient(135deg, #0b2a4a, #18b6d6);
+    color: white;
+
+    padding: 15px;
+    transform: translateY(60%);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.product-info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* HOVER AKTIV */
+.product-card:hover .product-info {
+  transform: translateY(0);
+    background: linear-gradient(135deg, #0b2a4a, #1fd0f0);
+}
+
+/* MOBILE FIX */
+@media (hover: none) {
+    .product-info {
+        transform: translateY(0);
+        position: relative;
+        background: #004aad;
+    }
+}
+
+
+footer{
+background:var(--primary);
+color:white;
+text-align:center;
+padding:40px;
+margin-top:50px;
+}
+
+.hero h1,
+.hero p,
+.hero .contact-top {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeUp 1s ease forwards;
+}
+
+.hero h1 {
+    animation-delay: 0.2s;
+}
+
+.hero p {
+    animation-delay: 0.5s;
+}
+
+.hero .contact-top {
+    animation-delay: 0.8s;
+}
+
+@keyframes heroFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lightbox {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+<button onclick="setLang('de'); localStorage.setItem('siteLang','de')">DE</button>
+<button onclick="setLang('en'); localStorage.setItem('siteLang','en')">EN</button>
+<button onclick="setLang('es'); localStorage.setItem('siteLang','es')">ES</button>
+<button onclick="setLang('ru'); localStorage.setItem('siteLang','ru')">RU</button>
+<button onclick="setLang('uk'); localStorage.setItem('siteLang','uk')">UA</button>
+</div>
+
+
+
+
+
+
+<nav class="navbar">
+  <ul>
+
+
+ <li><a href="#" onclick="showSection('home')">Home</a></li>
+
+ <li><a href="#" onclick="showSection('about')">About Us</a></li>
+
+ <li><a href="#" onclick="showSection('products')">Products</a></li>
+
+ <li><a href="#" onclick="showSection('regulatory-documents')">
+Regulatory Documents
+</a></li>
+
+ <li><a href="#" onclick="showSection('video')">Video</a></li>
+
+ <li><a href="#" onclick="showSection('career')">Career</a></li>
+ 
+ <li><a href="#" onclick="showSection('catalog')">Catalog</a></li>
+
+<li class="menu-item has-dropdown">
+  <a href="#">Products</a>
+
+  <div class="mega-menu">
+
+    <!-- UROLOGY -->
+    <div class="mega-column">
+      <h3>Urology</h3>
+
+      <div class="subcat">
+        <h4>Access Products</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture3_Ureteric_Catheter.jpg">
+      Ureteric Catheter
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture4_Ureteral_Access_Sheath.jpg">
+      Ureteral Access Sheath
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture5_Chiba_Needle.jpg">
+      Chiba Needle
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture6_Introducer_Needle.jpg">
+      Introducer Needle
+  </a>
+    <a href="#" class="menu-link" data-img="images/Picture7_IP_Needle.jpg">
+      I.P Needle  </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture61_HydrophilicGuidewire.jpg">
+      Hydro Tip Guide Wire  </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture9_Hydrophilic_Guidewire.jpg">
+      Hydrophilic Guide Wire  </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture10_Lunderquist_Guidewire.jpg">
+      Lunderquist Guide Wire  </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture11_PTFE_Guidewire.jpg">
+      PTFE Guide Wire (SS)
+    </a>
+ </div>
+<div class="subcat">
+ <h4>Accessories</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture12_EEC.jpg">
+      Evacuator (Bladder Evacuator/EEC)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture13_Pathfinder.jpg">
+      Pathfinder (Track Finder)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture14_Penile_Clamp.jpg">
+     Penile Clamp
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture15_TurSet.jpg">
+     TUR Set
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture16_CystoBridge.jpg">
+      Cysto Bridge
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture17_TurpSet.jpg">
+      TURP-Set
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture18_Bugbee_Electrode.jpg">
+      Bugbee Electrodes
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture19_TurpElectrode.jpg">
+      TURP Loops And Electrodes
+    </a>
+  </div>
+<div class="subcat">
+ <h4>Dilation Products</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture21_AmplatzDilator.jpg">
+      Amplatz Renal Dilator Kit
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture22_FascialDilator.jpg">
+      Fascial Dilator
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture23_FiliformDilator.jpg">
+     Filiform Dilator
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture24_MeatalDilator.jpg">
+     Meatal Dilator
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture25_MetalTelescopicDilator.jpg">
+     Metal Telescopic Dilator
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture26_NephrotrackBalloon.jpg">
+     Nephrotrac Balloon Diator (Catheter)
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture27_Nottingham_One.jpg">
+     Nottingham One-Step Dilator (Catheter)
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture28_Screw_Dilator.jpg">
+     Screw Dilator
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture29_UreteralBalloonDilator.jpg">
+     Ureteral Balloon Dilator (Catheter)
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture30_UreteralDilator.jpg">
+     Ureteral Dilator Set
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture31_UrethralDilator.jpg">
+     Urethral Dilator
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture32_SShapeDilator.jpg">
+     S ShapeDilator
+    </a>
+
+ </div>
+<div class="subcat">
+ <h4>Drainage Products</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture33_FoleyBalloonCat.jpg">
+      Foley Balloon Catheter (Silicone and Latex)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture34_NephrostomyDrainage.jpg">
+      Nephrostomy Drainage Kit (Pigtail)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture35_MalecotNephros.jpg">
+     Malecot Nephrostomy Kit
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture36_NephrostomyTube.jpg">
+     Nephrostomy Tube
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture37_Percutaneous_Nephro.jpg">
+     Percutaneous Nephrostomy Drainage Catheter with/without Lock
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture38_Pigtail_Nephro.jpg">
+    Percutaneous Nephrostomy Drainage Catheter Needle with/without Lock
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture39_PigtailCatheterwithSafety.jpg">
+     Percutaneous Nephrostomy Drainage Catheter Set with/without Lock
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture40_Re_entryMalecot.jpg">
+     Re-Entry Malecot Catheter
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture41_MalecotNephrostCatheter.jpg">
+     Malecot Nephrostomy Catheter
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture42_SuprapubicMalecotCatheter.jpg">
+     Suprapubic Malecot Catheter
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture43_Suprapubic_Cystostomy.jpg">
+     Suprapubic Cystostomy Kit
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture44_SuprapubicDrainage.jpg">
+     Suprapubic Drainage Kit with Silicone Balloon Catheter
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture45_Ureteral_DJS_Pullingstring.jpg">
+     Ureteral Double J Stent with Pulling String
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture46_DJS.jpg">
+     Double J Stent (Ureteral Catheter)
+    </a>
+
+     <a href="#" class="menu-link" data-img="images/Picture47_UrethralStent.jpg">
+     Urethral Stent
+    </a>
+ </div>
+<div class="subcat">
+ <h4>Stone Management</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture48_BiopsyForceps.jpg">
+      Biopsy Forceps
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture49_GraspingForceps.jpg">
+      Grasping Forceps (URS and Cystoscopy)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture50_PCNLForceps.jpg">
+     PCNL Forceps
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture51_StoneGraspingForceps.jpg">
+     Stone Grasping Forceps
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture52_BiprongForceps.jpg">
+    Biprong Forcep
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture53_StoneRetrievalBasket.jpg">
+     Stone Retrieval Basket (SS)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture54_StoneBasket.jpg">
+     Stone Basket
+    </a>
+
+  <a href="#" class="menu-link" data-img="images/Picture55_PCNLBasket.jpg">
+     Perk (PCNL) Basket
+    </a>
+
+  <a href="#" class="menu-link" data-img="images/Picture56_StoneRetrievalBasket.jpg">
+     Stone Retrieval Basket (Nitinol)
+    </a>
+ </div>
+ </div>
+
+
+    <div class="mega-column">
+      <h3>Gastroenterology</h3>
+
+      <div class="subcat">
+        <h4>Drainage Products</h4>
+    <a href="#" class="menu-link" data-img="images/Picture83_BiliaryStent_Gastro.jpg">
+      Biliary Stents-Standard
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture84_BiliaryStentAmsterdam_Gastro.jpg">
+      Biliary Stents-Amsterdam
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture85_BiliaryStentSinglePigtail_Gastro.jpg">
+      Biliary Stents-Single Pigtail
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture86_BiliaryStentDoublePigtail_Gastro.jpg">
+      Biliary Stents-Double Pigtail
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture87_BiliaryStentStraight_Gastro.jpg">
+      Biliary Stents-Straight
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture88_BiliaryStentPancreatic_Gastro.jpg">
+      Biliary Stents-Pancreatic
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture89_NasoBiliaryDrainC_Gastro.jpg">
+      Naso Biliary Drainage Catheter (NBDC)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture90_Abscess_DrainageSet_Pigtail_Gastro.jpg">
+      Abcess Drainage Sets-Pigtail Type
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture91_Abscess_DrainSet_MalecotType_Gastro.jpg">
+      Abcess Drainage Sets-Malecot Type
+    </a>
+
+ </div>
+<div class="subcat">
+<h4>Access Products</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture92_IPNNeedle_Gastro.jpg">
+      I.P Needle (Initial Puncture)
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture93_ChibaNeedle_Gastro.jpg">
+      Chiba Needle
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture94_IntroducerNeedle_Gastro.jpg">
+      Introducer Needle
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture8_Hydro_Twist_Guidewire.jpg">
+      Hydro Tip Guide Wire
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture96_Hydrophilic_Guidewire_Gastro.jpg">
+      Hydrophilic Guide Wire
+    </a>
+
+
+    <a href="#" class="menu-link" data-img="images/Picture97_PTFE_Guidewire_Gastro.jpg">
+      PTFE Guide Wire (SS)
+    </a>
+
+   <a href="#" class="menu-link" data-img="images/Picture98_SclerotherapyNeedle_Gastro.jpg">
+      Sclerotherapy Needle
+    </a>
+
+ </div>
+<div class="subcat">
+<h4>Accessoires</h4>
+
+    <a href="#" class="menu-link" data-img="images/Picture99_BiteBlock_Gastro.jpg">
+      Bite Block
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture100_CleaningBrush_Gastro.jpg">
+      Cleaning Brush
+    </a>
+
+    <a href="#" class="menu-link" data-img="images/Picture101_ColonoscopyPants_Gastro.jpg">
+      Colonoscopy Pants
+    </a>
+</div>
+ </div>
+
+    <!-- Gynaecology -->
+    <div class="mega-column">
+      <h3>Gynaecology</h3>
+
+      <div class="subcat">
+        <h4>Access Products</h4>
+    <a href="#" class="menu-link" data-img="images/Picture103_IUI_Gynaecology.jpg">
+      IUI
+    </a>
+
+
+      </div>
+        </div>
+
+      </div>
+    </li>
+
+  </ul>
+</nav>
+ 
+
+   
+   
+
+<header class="hero" style="position:relative; overflow:hidden; padding:100px 20px; text-align:center;">
+
+  
+<p
+data-en="We stand for competitive pricing, <span class='highlight'>highest quality standards</span>, transparent supply chains, rapid availability, regulatory responsibility, sustainable partnerships, and <span class='highlight'>exclusive market introduction</span>."
+
+data-de="Wir stehen für wettbewerbsfähige Preise, <span class='highlight'>höchste Qualitätsstandards</span>, transparente Lieferketten, schnelle Verfügbarkeit, regulatorische Verantwortung, nachhaltige Partnerschaften und <span class='highlight'>exklusive Markteinführung</span>."
+
+data-es="Representamos precios competitivos, <span class='highlight'>los más altos estándares de calidad</span>, cadenas de suministro transparentes, disponibilidad rápida, responsabilidad regulatoria, asociaciones sostenibles y una <span class='highlight'>introducción exclusiva al mercado</span>."
+
+data-ru="Мы выступаем за конкурентоспособные цены, <span class='highlight'>высочайшие стандарты качества</span>, прозрачные цепочки поставок, быструю доступность, регуляторную ответственность, устойчивые партнерства и <span class='highlight'>эксклюзивный вывод на рынок</span>."
+
+data-uk="Ми виступаємо за конкурентні ціни, <span class='highlight'>найвищі стандарти якості</span>, прозорі ланцюги постачання, швидку доступність, регуляторну відповідальність, сталі партнерства та <span class='highlight'>ексклюзивний вихід на ринок</span>."
+>
+We stand for competitive pricing, <span class="highlight">highest quality standards</span>, transparent supply chains, rapid availability, regulatory responsibility, sustainable partnerships, and <span class="highlight">exclusive market introduction</span>.
+</p>
+
+
+  <!-- ✨ TITLE -->
+  <h1 style="color:var(--text);">LifeCare Med Swiss</h1>
+
+  <!-- ✨ TEXT (DE/EN ready) -->
+  <p style="color:var(--text);"
+    data-en="Medical Devices. Quality. Precision. Switzerland."
+   data-de="Medizinprodukte. Qualität. Präzision. Schweiz."
+   data-es="Dispositivos médicos. Calidad. Precisión. Suiza."
+   data-ru="Медицинские изделия. Качество. Точность. Швейцария."
+   data-uk="Медичні вироби. Якість. Точність. Швейцарія.">
+    Medical Devices. Quality. Precision. Switzerland.
+  </p>
+
+  <div class="contact-top" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+
+    <button onclick="openEmailPopup()"
+      style="padding:10px 14px; border:none; border-radius:8px; background:#18b6d6; color:white; cursor:pointer;">
+      📧 Email
+    </button>
+
+    <button onclick="openWhatsAppPopup()"
+      style="padding:10px 14px; border:none; border-radius:8px; background:#25D366; color:white; cursor:pointer;">
+      📱 WhatsApp
+    </button>
+
+  </div>
+
+</div>
+
+</header>
+<section id="video" style="text-align:center; padding:60px 20px;" class="page">
+
+  <h2>Introduction Video</h2>
+
+  <video controls style="max-width:100%; width:900px; border-radius:12px;">
+    <source src="videos/Life Care Med Swiss Introduction_0p.mp4" type="video/mp4">
+  </video>
+
+</section>
+<section id="home"  class="page">
+<h2>LifeCare Med Swiss</h2>
+<p style="text-align:center;"
+data-en="Our integrated model combines regulatory expertise, manufacturing partnerships, and global distribution to accelerate market entry and maximize product reach."
+data-de="Unser integriertes Modell verbindet regulatorische Expertise, Produktionspartnerschaften und globale Distribution, um den Markteintritt zu beschleunigen und die Reichweite von Produkten zu maximieren."
+data-es="Nuestro modelo integrado combina experiencia regulatoria, asociaciones de fabricación y distribución global para acelerar la entrada al mercado y maximizar el alcance del producto."
+data-ru="Наша интегрированная модель объединяет регуляторную экспертизу, производственные партнерства и глобальную дистрибуцию для ускорения выхода на рынок и максимального охвата продукции."
+data-uk="Наша інтегрована модель поєднує регуляторну експертизу, виробничі партнерства та глобальну дистрибуцію для прискорення виходу на ринок і максимального охоплення продуктів.">
+Our integrated model combines regulatory expertise, manufacturing partnerships, and global distribution to accelerate market entry and maximize product reach.
+</p>
+
+
+</section>
+
+<section id="about" class="page">
+<h2 data-en="About Us" data-de="Über uns">About Us</h2>
+<p style="text-align:center; max-width:800px; margin:auto;"
+data-en="LifeCare Med Swiss, acting as CH-Rep, manufacturer, and importer, is based in Switzerland. We are a strategic partner of medical devices for distributors, importers, dealers, and healthcare professionals, with a strong focus on quality, efficiency, competitive pricing, and regulatory responsibility to ensure optimal market access worldwide."
+
+data-de="LifeCare Med Swiss mit seinen Rollen als CH-Bevollmächtigter, Hersteller und Importeur hat seinen Sitz in der Schweiz. Wir sind ein strategischer Partner von Medizinprodukten für Distributoren, Importeure, Händler und Fachkräfte im Gesundheitswesen, mit Fokus auf Qualität, Effizienz, wettbewerbsfähige Preise und regulatorische Verantwortung für einen optimalen Marktzugang weltweit."
+
+data-es="LifeCare Med Swiss, actuando como representante autorizado en Suiza (CH-Rep), fabricante e importador, tiene su sede en Suiza. Somos un socio estratégico de dispositivos médicos para distribuidores, importadores, comerciantes y profesionales de la salud, con un fuerte enfoque en calidad, eficiencia, precios competitivos y responsabilidad regulatoria para garantizar un acceso óptimo al mercado a nivel mundial."
+
+data-ru="LifeCare Med Swiss, выступая в качестве уполномоченного представителя в Швейцарии (CH-Rep), производителя и импортера, базируется в Швейцарии. Мы являемся стратегическим партнером медицинских изделий для дистрибьюторов, импортеров, дилеров и медицинских специалистов с акцентом на качество, эффективность, конкурентные цены и регуляторную ответственность для обеспечения оптимального выхода на рынок по всему миру."
+
+data-uk="LifeCare Med Swiss, виступаючи як уповноважений представник у Швейцарії (CH-Rep), виробник та імпортер, базується у Швейцарії. Ми є стратегічним партнером медичних виробів для дистриб'юторів, імпортерів, дилерів та медичних фахівців із акцентом на якість, ефективність, конкурентні ціни та регуляторну відповідальність для забезпечення оптимального виходу на ринок у всьому світі.">
+LifeCare Med Swiss, acting as CH-Rep, manufacturer, and importer, is based in Switzerland. We are a strategic partner of medical devices for distributors, importers, dealers, and healthcare professionals.
+</p>
+
+<p style="margin-top:20px; color:#18b6d6; font-weight:600; font-size:16px;">
+  CH-Rep | Manufacturer | Importer | Global Distribution Partner
+</p>
+
+
+<h3 data-en="Core Team"
+    data-de="Unser Core Team"
+    data-es="Equipo principal"
+    data-ru="Основная команда"
+    data-uk="Основна команда">
+    Core Team
+</h3>
+
+<ul>
+<li data-en="R&D medical devices & production"
+    data-de="F&E Medizintechnik & Produktion"
+    data-es="I+D de dispositivos médicos y producción"
+    data-ru="НИОКР медицинских изделий и производство"
+    data-uk="НДДКР медичних виробів і виробництво">
+    R&D medical devices & production
+</li>
+
+<li data-en="Clinical application"
+    data-de="Klinische Anwendung"
+    data-es="Aplicación clínica"
+    data-ru="Клиническое применение"
+    data-uk="Клінічне застосування">
+    Clinical application
+</li>
+
+<li data-en="Quality management"
+    data-de="Qualitätsmanagement"
+    data-es="Gestión de calidad"
+    data-ru="Управление качеством"
+    data-uk="Управління якістю">
+    Quality management
+</li>
+
+<li data-en="Regulatory Affairs"
+    data-de="Regulatory Affairs"
+    data-es="Asuntos regulatorios"
+    data-ru="Регуляторные вопросы"
+    data-uk="Регуляторні питання">
+    Regulatory Affairs
+</li>
+
+<li data-en="Supply Chain & export documents (CH - Free Sales Certificates, COO, CoA, CoC, invoice, delivery note)"
+    data-de="Supply Chain inkl. Exportdokumente (CH - Free Sales Certificates, COO, CoA, CoC, Rechnung, Lieferschein)"
+    data-es="Cadena de suministro y documentos de exportación (CH - certificados de libre venta, COO, CoA, CoC, factura, albarán)"
+    data-ru="Цепочка поставок и экспортные документы (CH - сертификаты свободной продажи, COO, CoA, CoC, счет-фактура, накладная)"
+    data-uk="Ланцюг постачання та експортні документи (CH - сертифікати вільного продажу, COO, CoA, CoC, рахунок, накладна)">
+</li>
+
+<li data-en="Customer service & training"
+    data-de="Kundenservice & Schulung"
+    data-es="Atención al cliente y formación"
+    data-ru="Обслуживание клиентов и обучение"
+    data-uk="Обслуговування клієнтів та навчання">
+</li>
+
+</ul>
+
+<h3 data-en="RegCheck Service"
+    data-de="RegCheck Service"
+    data-es="Servicio de cumplimiento regulatorio"
+    data-ru="Регуляторный сервис"
+    data-uk="Регуляторний сервіс">
+    RegCheck Service
+</h3>
+
+<ul>
+
+<li data-en="Creation and maintenance of technical documentation (80% faster)"
+    data-de="Erstellung und Aufrechterhaltung technischer Dokumentation (80% schneller)"
+    data-es="Creación y mantenimiento de documentación técnica (80% más rápido)"
+    data-ru="Создание и ведение технической документации (на 80% быстрее)"
+    data-uk="Створення та ведення технічної документації (на 80% швидше)">
+</li>
+
+<li data-en="Regulatory compliance check (1 day)"
+    data-de="Regulatory-Compliance-Prüfung (1 Tag)"
+    data-es="Control de cumplimiento regulatorio (1 día)"
+    data-ru="Проверка нормативного соответствия (1 день)"
+    data-uk="Перевірка регуляторної відповідності (1 день)">
+</li>
+
+<li data-en="Management of audits & inspections"
+    data-de="Begleitung von Audits & Inspektionen"
+    data-es="Gestión de auditorías e inspecciones"
+    data-ru="Управление аудитами и инспекциями"
+    data-uk="Управління аудитами та інспекціями">
+</li>
+
+<li data-en="Management of clinical evaluations & PMS system"
+    data-de="Management von klinischen Bewertungen & PMS-Systemen"
+    data-es="Gestión de evaluaciones clínicas y sistema PMS"
+    data-ru="Управление клиническими оценками и системой PMS"
+    data-uk="Управління клінічними оцінками та системою PMS">
+</li>
+
+
+<li data-en="Market access / registration of medical devices internationally"
+    data-de="Marktzugang / Registrierung von Medizinprodukten international"
+    data-es="Acceso al mercado / registro de productos médicos internacional"
+    data-ru="Выход на рынок / регистрация медицинских изделий международно"
+    data-uk="Вихід на ринок / реєстрація медичних виробів міжнародно">
+</li>
+
+</ul>
+
+</section>
+
+<section id="products" class="page">
+<h2 data-en="Products" data-de="Produkte">Products</h2>
+
+<div class="category-bar">
+<button onclick="showCategory('all')"
+        data-en="All"
+        data-de="Alle"
+        data-es="Todos"
+        data-ru="Все"
+        data-uk="Усі">
+    All
+</button>
+
+<button onclick="showCategory('Urology')"
+        data-en="Urology"
+        data-de="Urologie"
+        data-es="Urología"
+        data-ru="Урология"
+        data-uk="Урологія">
+    Urology
+</button>
+
+<button onclick="showCategory('Gastroenterology')"
+        data-en="Gastroenterology"
+        data-de="Gastroenterologie"
+        data-es="Gastroenterología"
+        data-ru="Гастроэнтерология"
+        data-uk="Гастроентерологія">
+    Gastroenterology
+</button>
+
+<button onclick="showCategory('Gynaecology')"
+        data-en="Gynaecology"
+        data-de="Gynäkologie"
+        data-es="Ginecología"
+        data-ru="Гинекология"
+        data-uk="Гінекологія">
+    Gynaecology
+</button>
+</div>
+
+<div class="product-grid" id="grid"></div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+</div>
+
+<div id="regPopup" class="lightbox">
+  <div class="popup-box">
+    <h3>Request Regulatory Documents</h3>
+    <p>Please contact us via Email or WhatsApp.</p>
+
+    <button onclick="openEmailPopup()">Email</button>
+    <button onclick="openWhatsAppPopup()">WhatsApp</button>
+    <br><br>
+    <button onclick="closeRegDocsPopup()">Close</button>
+  </div>
+</div>
+
+<section id="career" class="page">
+    <h2 data-en="Career" data-de="Karriere">Career</h2>
+    <p style="text-align:center;"
+ data-en="We are looking for motivated professionals in MedTech, Regulatory Affairs, Engineering, Production, Marketing & Sales. Remote work is encouraged where possible."  
+      data-de="Zur Verstärkung unseres Teams suchen wir engagierte Fachkräfte in den Bereichen MedTech, Regulatory Affairs, Engineering, Produktion sowie Marketing & Sales. Remote-Arbeit ist, wo möglich, ausdrücklich erwünscht."
+      data-es="Buscamos profesionales motivados en MedTech, asuntos regulatorios, ingeniería, producción, marketing y ventas. El trabajo remoto es bienvenido siempre que sea posible."
+      data-ru="Мы ищем мотивированных специалистов в области MedTech, регуляторных вопросов, инженерии, производства, маркетинга и продаж. Удаленная работа приветствуется, где это возможно."
+      data-uk="Ми шукаємо мотивованих фахівців у сфері MedTech, регуляторних питань, інженерії, виробництва, маркетингу та продажів. Віддалена робота вітається там, де це можливо.">
+      We are looking for motivated professionals in MedTech, Regulatory Affairs, Engineering, Production, Marketing & Sales. Remote work is encouraged where possible.
+    </p>
+</section>
+
+<section id="catalog" class="page"> 
+ <h2 
+    data-en="Catalog"
+    data-de="Katalog"
+    data-es="Catálogo"
+    data-ru="Каталог"
+    data-uk="Каталог">
+    Catalog
+  </h2>
+
+  <p style="text-align:center; font-size:18px; margin-top:10px;"
+     data-en="Coming soon"
+     data-de="Demnächst verfügbar"
+     data-es="Próximamente"
+     data-ru="Скоро"
+     data-uk="Скоро">
+     
+     Coming soon
+
+  </p>
+</section>
+
+<section id="regulatory-documents" class="page">
+
+  <h2 
+    data-en="Regulatory Documents"
+    data-de="Regulatorische Dokumente"
+    data-es="Documentos regulatorios"
+    data-ru="Регуляторные документы"
+    data-uk="Регуляторні документи">
+    Regulatory Documents
+  </h2>
+
+<p 
+data-en="Documents are available upon request via official channels, including ISO 13485 certification, Regulation (EU) 2017/745 (MDR), and Swiss Free Sales Certificates (CH)."
+data-de="Dokumente sind auf Anfrage über unsere offiziellen Vertriebskanäle erhältlich, einschließlich der ISO 13485-Zertifizierung, der Verordnung (EU) 2017/745 (MDR) sowie Schweizer Free Sales Certificates (CH)."
+data-es="Los documentos están disponibles bajo solicitud a través de nuestros canales oficiales, incluyendo la certificación ISO 13485, el Reglamento (UE) 2017/745 (MDR) y los certificados suizos de libre venta (CH)."
+data-ru="Документы доступны по запросу через официальные каналы, включая сертификацию ISO 13485, Регламент (ЕС) 2017/745 (MDR) и швейцарские сертификаты свободной продажи (CH)."
+data-uk="Документи доступні за запитом через офіційні канали, включаючи сертифікацію ISO 13485, Регламент (ЄС) 2017/745 (MDR) та швейцарські сертифікати вільного продажу (CH).">
+Documents are available upon request via official channels, including ISO 13485 certification, Regulation (EU) 2017/745 (MDR), and Swiss Free Sales Certificates (CH).
+</p>
+
+<ul style="text-align:center; list-style:none; padding:0; margin-top:15px; font-weight:600;">
+  <li>✔ ISO 13485 Certification</li>
+  <li>✔ Regulation (EU) 2017/745 (MDR)</li>
+  <li>✔ Swiss Free Sales Certificates (CH)</li>
+</ul>
+
+<p style="text-align:center; font-size:14px; opacity:0.8;">
+  Additional documentation available upon request.
+</p>
+
+  <!-- 🔥 BUTTON statt Links -->
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="openRegDocsPopup()"
+      style="padding:12px 20px; background:#18b6d6; color:white; border:none; border-radius:8px; cursor:pointer;">
+      Request Documents
+    </button>
+  </div>
+
+</section>
+
+
+<footer>
+LifeCare Med Swiss<br>
+Baarerstrasse 43, 6300 Zug<br>
+Switzerland<br>
+Email: lifecaremedswiss@gmx.ch<br>
+WhatsApp: +41 76 748 77 69<br>
+(formation updates till June 2026)
+
+<a href="#" onclick="openPrivacyPopup(); return false;"
+   data-en="Privacy Policy"
+   data-de="Datenschutz"
+   data-es="Privacidad"
+   data-ru="Конфиденциальность"
+   data-uk="Конфіденційність">
+   Privacy Policy
+</a>
+
+
+
+© 2026 LifeCare Med Swiss. All rights reserved.
+
+</footer>
+
+<script>
+
+
+function openEmailPopup(){
+    document.getElementById("emailPopup").classList.add("active");
+}
+
+function closeEmailPopup(){
+    document.getElementById("emailPopup").classList.remove("active");
+}
+
+function openWhatsAppPopup(){
+    document.getElementById("whatsappPopup").classList.add("active");
+}
+
+function closeWhatsAppPopup(){
+    document.getElementById("whatsappPopup").classList.remove("active");
+}
+
+function setLang(lang){
+
+  // Buttons aktiv setzen
+  document.querySelectorAll(".lang-bar button").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  document.querySelector(`.lang-bar button[onclick*="${lang}"]`)?.classList.add("active");
+
+  // Texte wechseln (SICHER VERSION)
+  document.querySelectorAll("[data-en]").forEach(el=>{
+
+    let text = el.getAttribute("data-" + lang);
+
+    // Fallback auf EN
+    if(!text){
+      text = el.getAttribute("data-en");
+    }
+
+    // Wenn IMMER NOCH nichts → NICHT überschreiben
+    if(!text){
+      return;
+    }
+
+    if(text.includes("<")){
+      el.innerHTML = text;
+    } else {
+      el.textContent = text;
+    }
+
+  });
+}
+
+document.addEventListener("click", function(e){
+
+  const link = e.target.closest(".menu-link");
+
+  if(!link) return;
+
+  e.preventDefault();
+
+  const img = link.getAttribute("data-img");
+
+  if(img){
+    openLightbox(img);
+  }
+
+});
+
+function detectLanguage() {
+    const lang = navigator.language || navigator.userLanguage;
+
+    if (lang.startsWith("de")) return "de";
+    if (lang.startsWith("es")) return "es";
+    if (lang.startsWith("ru")) return "ru";
+    if (lang.startsWith("uk")) return "uk";
+
+    return "en"; // fallback
+}
+
+// Auto Start beim Laden der Seite
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".has-dropdown > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      this.parentElement.classList.toggle("open");
+    });
+  });
+
+});
+
+function openVideoPopup(){
+  document.getElementById("videoPopup").classList.add("active");
+}
+
+function closeVideoPopup(){
+    const popup = document.getElementById("videoPopup");
+    const video = popup.querySelector("video");
+
+    popup.classList.remove("active");
+    video.pause();
+    video.currentTime = 0;
+}
+
+const products = [
+// Urology
+    { name: "Urology Set", img: "images/Picture1_Urology.jpg", cat: "Urology" },
+    { name: "PTFE Guidewire", img: "images/Picture2_PTFEGuidewire.jpg", cat: "Urology" },
+    { name: "Ureteric Catheter", img: "images/Picture3_Ureteric_Catheter.jpg", cat: "Urology" },
+    { name: "Ureteral Access Sheath", img: "images/Picture4_Ureteral_Access_Sheath.jpg", cat: "Urology" },
+    { name: "Chiba Needle", img: "images/Picture5_Chiba_Needle.jpg", cat: "Urology" },
+    { name: "Introducer Needle", img: "images/Picture6_Introducer_Needle.jpg", cat: "Urology" },
+    { name: "IP Needle", img: "images/Picture7_IP_Needle.jpg", cat: "Urology" },
+    { name: "Hydro Twist Guidewire", img: "images/Picture8_Hydro_Twist_Guidewire.jpg", cat: "Urology" },
+    { name: "Hydrophilic Guidewire", img: "images/Picture9_Hydrophilic_Guidewire.jpg", cat: "Urology" },
+    { name: "Lunderquist Guidewire", img: "images/Picture10_Lunderquist_Guidewire.jpg", cat: "Urology" },
+    { name: "PTFE Guidewire", img: "images/Picture11_PTFE_Guidewire.jpg", cat: "Urology" },
+    { name: "EEC", img: "images/Picture12_EEC.jpg", cat: "Urology" },
+    { name: "Pathfinder", img: "images/Picture13_Pathfinder.jpg", cat: "Urology" },
+    { name: "Penile Clamp", img: "images/Picture14_Penile_Clamp.jpg", cat: "Urology" },
+    { name: "Tur Set", img: "images/Picture15_TurSet.jpg", cat: "Urology" },
+    { name: "Cysto Bridge", img: "images/Picture16_CystoBridge.jpg", cat: "Urology" },
+    { name: "Turp Set", img: "images/Picture17_TurpSet.jpg", cat: "Urology" },
+    { name: "Bugbee Electrode", img: "images/Picture18_Bugbee_Electrode.jpg", cat: "Urology" },
+    { name: "Turp Electrode", img: "images/Picture19_TurpElectrode.jpg", cat: "Urology" },
+    { name: "Amplatz Sheath", img: "images/Picture20_AmplatzSheath.jpg", cat: "Urology" },
+    { name: "Amplatz Dilator", img: "images/Picture21_AmplatzDilator.jpg", cat: "Urology" },
+    { name: "Fascial Dilator", img: "images/Picture22_FascialDilator.jpg", cat: "Urology" },
+    { name: "Filiform Dilator", img: "images/Picture23_FiliformDilator.jpg", cat: "Urology" },
+    { name: "Meatal Dilator", img: "images/Picture24_MeatalDilator.jpg", cat: "Urology" },
+    { name: "Metal Telescopic Dilator", img: "images/Picture25_MetalTelescopicDilator.jpg", cat: "Urology" },
+    { name: "Nephrotrack Balloon Dilator", img: "images/Picture26_NephrotrackBalloon.jpg", cat: "Urology" },
+    { name: "Nottingham One-Stop Dilator", img: "images/Picture27_Nottingham_One.jpg", cat: "Urology" },
+    { name: "Screw Dilator", img: "images/Picture28_Screw_Dilator.jpg", cat: "Urology" },
+    { name: "Ureteral Balloon Dilator", img: "images/Picture29_UreteralBalloonDilator.jpg", cat: "Urology" },
+    { name: "Ureteral Dilator", img: "images/Picture30_UreteralDilator.jpg", cat: "Urology" },
+    { name: "Urethral Dilator", img: "images/Picture31_UrethralDilator.jpg", cat: "Urology" },
+    { name: "S Shape Dilator", img: "images/Picture32_SShapeDilator.jpg", cat: "Urology" },
+    { name: "Foley Balloon Catheter", img: "images/Picture33_FoleyBalloonCat.jpg", cat: "Urology" },
+    { name: "Nephrostomy Drainage Kit (Pigtail)", img: "images/Picture34_NephrostomyDrainage.jpg", cat: "Urology" },
+    { name: "Malecot Nephrostomy Drainage Kit", img: "images/Picture35_MalecotNephros.jpg", cat: "Urology" },
+    { name: "Nephrostomy Tube", img: "images/Picture36_NephrostomyTube.jpg", cat: "Urology" },
+    { name: "Percutaneous Nephrostomy Pigtail Catheter", img: "images/Picture37_Percutaneous_Nephro.jpg", cat: "Urology" },
+    { name: "Pigtail Nephrostomy Drainage Catheter with Trocar", img: "images/Picture38_Pigtail_Nephro.jpg", cat: "Urology" },
+    { name: "Pigtail Catheter with Safety Mechanism", img: "images/Picture39_PigtailCatheterwithSafety.jpg", cat: "Urology" },
+    { name: "Re-Entry Malecot Catheter", img: "images/Picture40_Re_entryMalecot.jpg", cat: "Urology" },
+    { name: "Malecot Nephrostomy Catheter", img: "images/Picture41_MalecotNephrostCatheter.jpg", cat: "Urology" },
+    { name: "Suprapubic Malecot Catheter", img: "images/Picture42_SuprapubicMalecotCatheter.jpg", cat: "Urology" },
+    { name: "Suprapubic Cystostomy Kit", img: "images/Picture43_Suprapubic_Cystostomy.jpg", cat: "Urology" },
+    { name: "Suprapubic Drainage Kit with Silicone Balloon Catheter", img: "images/Picture44_SuprapubicDrainage.jpg", cat: "Urology" },
+    { name: "Ureteral Double J Stent with Pulling String", img: "images/Picture45_Ureteral_DJS_Pullingstring.jpg", cat: "Urology" },
+    { name: "Double J Stent", img: "images/Picture46_DJS.jpg", cat: "Urology" },
+    { name: "Urethral Stent", img: "images/Picture47_UrethralStent.jpg", cat: "Urology" },
+    { name: "Biopsy Forceps", img: "images/Picture48_BiopsyForceps.jpg", cat: "Urology" },
+    { name: "Grasping Forceps", img: "images/Picture49_GraspingForceps.jpg", cat: "Urology" },
+    { name: "PCNL Forceps", img: "images/Picture50_PCNLForceps.jpg", cat: "Urology" },
+    { name: "Stone Grasping Forceps", img: "images/Picture51_StoneGraspingForceps.jpg", cat: "Urology" },
+    { name: "Biprong Forceps", img: "images/Picture52_BiprongForceps.jpg", cat: "Urology" },
+    { name: "Stone Retrieval Basket", img: "images/Picture53_StoneRetrievalBasket.jpg", cat: "Urology" },
+    { name: "Stone Basket", img: "images/Picture54_StoneBasket.jpg", cat: "Urology" },
+    { name: "Perk PCNL Basket", img: "images/Picture55_PCNLBasket.jpg", cat: "Urology" },
+    { name: "Stone Retrieval Basket (Nitinol)", img: "images/Picture56_StoneRetrievalBasket.jpg", cat: "Urology" },
+    { name: "IP Needle", img: "images/Picture57_IPNeedle.jpg", cat: "Urology" },
+    { name: "Chiba Needle", img: "images/Picture58_ChibaNeedle.jpg", cat: "Urology" },
+    { name: "Introducer Needle", img: "images/Picture59_IntroducerNeedle.jpg", cat: "Urology" },
+    { name: "Hydro Twist Guidewire", img: "images/Picture60_HydroTwisterGuidewire.jpg", cat: "Urology" },
+    { name: "Hydrophilic Guidewire", img: "images/Picture61_HydrophilicGuidewire.jpg", cat: "Urology" },
+    { name: "Lunderquist Guidewire", img: "images/Picture62_LunderquistGuidewire.jpg", cat: "Urology" },
+    { name: "Fascial Dilator", img: "images/Picture64_FascialDilator.jpg", cat: "Urology" },
+    { name: "Double Step Dilator", img: "images/Picture65_DoubleStepDilator.jpg", cat: "Urology" },
+    { name: "Balloon Dilator (Catheter)", img: "images/Picture66_Balloon_Dilator.jpg", cat: "Urology" },
+    { name: "Tubal Cannulation", img: "images/Picture67_TubalCannulation.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Kit", img: "images/Picture68_AbscessDrainageKit.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Catheter with Trocar", img: "images/Picture69_AbscessDrainageCatheterwithTrocar.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Catheter", img: "images/Picture70_AbscessDrainageC.jpg", cat: "Urology" },
+    { name: "Naso Jejunal Feeding Tube", img: "images/Picture71_NasoJejunal.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Malecot Catheter", img: "images/Picture72_AbscessDrainageMalecotC.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Malecot Catheter Kit", img: "images/Picture73_AbscessMalecotDrainageKit.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Catheter Kit (Pigtail)", img: "images/Picture74_AbscessDrainKit.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Pigtail Catheters with Safety Mechanism", img: "images/Picture75_AbscessDrainPigtailCSafetyMech.jpg", cat: "Urology" },
+    { name: "PTBD Set", img: "images/Picture76_PTBD_Set.jpg", cat: "Urology" },
+    { name: "Abscess Drainage Suprapubic Malecot Catheter", img: "images/Picture77_AbscessDrainSuprapubicMalecC.jpg", cat: "Urology" },
+    { name: "PTBD Catheter", img: "images/Picture78_PTBDCat.jpg", cat: "Urology" },
+    { name: "Biopsy Gun", img: "images/Picture79_BiopsyGun.jpg", cat: "Urology" },
+    { name: "Biopsy Needle", img: "images/Picture80_BiopsyNeedle.jpg", cat: "Urology" },
+    { name: "Magnum Biopsy Instrument", img: "images/Picture81_MagnumBiopsyInstrument.jpg", cat: "Urology" },
+
+// Gastroenterology
+    { name: "Gastroenterology", img: "images/Picture82_GastroEnterology.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Standard)", img: "images/Picture83_BiliaryStent_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Amsterdam)", img: "images/Picture84_BiliaryStentAmsterdam_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Single Pigtail)", img: "images/Picture85_BiliaryStentSinglePigtail_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Double Pigtail)", img: "images/Picture86_BiliaryStentDoublePigtail_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Straight)", img: "images/Picture87_BiliaryStentStraight_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Biliary Stent (Pancreatic)", img: "images/Picture88_BiliaryStentPancreatic_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Naso Biliary Drainage Catheter", img: "images/Picture89_NasoBiliaryDrainC_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Abscess Drainage Sets (Pigtail Type)", img: "images/Picture90_Abscess_DrainageSet_Pigtail_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Abscess Drainage Sets (Malecot Type)", img: "images/Picture91_Abscess_DrainSet_MalecotType_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "IP Needle", img: "images/Picture92_IPNNeedle_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Chiba Needle", img: "images/Picture93_ChibaNeedle_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Introducer Needle", img: "images/Picture94_IntroducerNeedle_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Hydro Twister Guide Wire", img: "images/Picture95_HydroTwisterGuidewire_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Hydrophilic Guide Wire", img: "images/Picture96_Hydrophilic_Guidewire_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "PTFE Guide Wire", img: "images/Picture97_PTFE_Guidewire_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Sclerotherapy Needle", img: "images/Picture98_SclerotherapyNeedle_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Bite Block", img: "images/Picture99_BiteBlock_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Cleaning Brush", img: "images/Picture100_CleaningBrush_Gastro.jpg", cat: "Gastroenterology" },
+    { name: "Colonoscopy Pants", img: "images/Picture101_ColonoscopyPants_Gastro.jpg", cat: "Gastroenterology" },
+
+// Gynaecology
+    { name: "Gynaecology", img: "images/Picture102_Gynaecology.jpg", cat: "Gynaecology" },
+    { name: "IUI", img: "images/Picture103_IUI_Gynaecology.jpg", cat: "Gynaecology" }];
+
+function openProductPopup(name, img){
+    const popup = document.getElementById("productPopup");
+
+    popup.classList.add("active");
+    document.getElementById("popup-img").src = img;
+    popup.querySelector("h3").innerText = name;
+}
+
+function closeProductPopup(){
+    document.getElementById("productPopup").classList.remove("active");
+}
+
+function render(list){
+    const g = document.getElementById("grid");
+    let html = "";
+
+    list.forEach(p=>{
+        html += `
+        <div class='product-card'>
+          <img src='${p.img}' alt='${p.name}' onclick="openProductPopup('${p.name}', '${p.img}')">
+            <div class='product-info'><h3>${p.name}</h3></div>
+        </div>`;
+    });
+
+    g.innerHTML = html;
+}
+
+function showCategory(category){
+    const filtered = category === "all"
+        ? products
+        : products.filter(p => p.cat === category);
+
+    render(filtered);
+}
+
+function openLightbox(src){
+
+  const lb = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+
+  console.log("IMAGE PATH:", src);
+
+  img.onerror = function(){
+    console.error("IMAGE NOT FOUND:", src);
+  };
+
+  img.src = src;
+  lb.classList.add("active");
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").classList.remove("active");
+}
+
+function openPrivacyPopup(){
+    document.getElementById("privacyPopup").classList.add("active");
+}
+
+function closePrivacyPopup(){
+    document.getElementById("privacyPopup").classList.remove("active");
+}
+
+function showSection(id){
+
+  // alles verstecken
+  document.querySelector(".hero").style.display = "none";
+
+  document.querySelectorAll(".page").forEach(sec=>{
+    sec.style.display = "none";
+  });
+
+document.querySelectorAll(".menu-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const img = link.dataset.img;
+
+    // Beispiel: neues Fenster oder Modal
+    window.open(img, "_blank");
+  });
+});
+
+  // HOME
+  if(id === "home"){
+    document.querySelector(".hero").style.display = "block";
+    window.scrollTo(0,0);
+    return;
+  }
+
+  // Ziel anzeigen
+  const target = document.getElementById(id);
+
+  if(target){
+    target.style.display = "block";
+  } else {
+    console.warn("Section nicht gefunden:", id);
+    document.querySelector(".hero").style.display = "block";
+  }
+
+  window.scrollTo(0,0);
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  showSection("home");
+});
+
+showCategory('all');
+function openRegDocsPopup(){
+    document.getElementById("regPopup").style.display = "flex";
+}
+
+function closeRegDocsPopup(){
+    document.getElementById("regPopup").style.display = "none";
+}
+
+
+
+<div id="videoPopup" class="lightbox">
+
+  <span class="close" onclick="closeVideoPopup()">×</span>
+
+  <video controls autoplay
+    style="max-width:90%; max-height:90%; border-radius:12px;">
+    <source src="videos/Life Care Med Swiss Introduction_0p.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<div id="emailPopup" class="lightbox">
+  <div class="popup-box">
+    <h3>Email Contact</h3>
+    <p>lifecaremedswiss@gmx.ch</p>
+
+    <button onclick="window.location.href='mailto:lifecaremedswiss@gmx.ch'">
+      Open Email
+    </button>
+
+    <br><br>
+
+    <button onclick="closeEmailPopup()">Close</button>
+  </div>
+</div>
+
+<!-- WHATSAPP POPUP -->
+<div id="whatsappPopup" class="lightbox">
+  <div class="popup-box">
+    <h3>WhatsApp Contact</h3>
+    <p>+41 76 748 77 69</p>
+
+    <button onclick="window.open('https://wa.me/41767487769','_blank')">
+      Open WhatsApp
+    </button>
+
+    <br><br>
+
+    <button onclick="closeWhatsAppPopup()">Close</button>
+  </div>
+</div>
+
+<div id="privacyPopup" class="lightbox">
+  <div class="popup-box" style="max-width:700px; text-align:left;">
+
+    <h3
+      data-en="Privacy Policy"
+      data-de="Datenschutzerklärung"
+      data-es="Política de privacidad"
+      data-ru="Политика конфиденциальности"
+      data-uk="Політика конфіденційності">
+      Privacy Policy
+    </h3>
+
+    <p
+      data-en="LifeCare Med Swiss, Baarerstrasse 43, 6300 Zug, Switzerland, is responsible for the processing of personal data."
+      data-de="LifeCare Med Swiss, Baarerstrasse 43, 6300 Zug, Schweiz, ist verantwortlich für die Verarbeitung personenbezogener Daten."
+      data-es="LifeCare Med Swiss, Baarerstrasse 43, 6300 Zug, Suiza, es responsable del tratamiento de datos personales."
+      data-ru="LifeCare Med Swiss, Baarerstrasse 43, 6300 Zug, Швейцария, отвечает за обработку персональных данных."
+      data-uk="LifeCare Med Swiss, Baarerstrasse 43, 6300 Zug, Швейцарія, відповідає за обробку персональних даних.">
+    </p>
+
+    <p
+      data-en="We collect personal data such as email addresses and communication details when you contact us via email or WhatsApp."
+      data-de="Wir erfassen personenbezogene Daten wie E-Mail-Adressen und Kommunikationsdaten, wenn Sie uns per E-Mail oder WhatsApp kontaktieren."
+      data-es="Recopilamos datos personales como direcciones de correo electrónico y datos de comunicación cuando nos contacta por correo electrónico o WhatsApp."
+      data-ru="Мы собираем персональные данные, такие как адреса электронной почты и данные связи, когда вы связываетесь с нами по электронной почте или через WhatsApp."
+      data-uk="Ми збираємо персональні дані, такі як адреси електронної пошти та дані зв’язку, коли ви зв’язуєтеся з нами електронною поштою або через WhatsApp.">
+    </p>
+
+    <p
+      data-en="This data is used exclusively to respond to inquiries and maintain communication."
+      data-de="Diese Daten werden ausschließlich zur Bearbeitung von Anfragen und zur Kommunikation verwendet."
+      data-es="Estos datos se utilizan exclusivamente para responder a consultas y mantener la comunicación."
+      data-ru="Эти данные используются исключительно для обработки запросов и поддержания связи."
+      data-uk="Ці дані використовуються виключно для обробки запитів і підтримки зв’язку.">
+    </p>
+
+    <p
+      data-en="Please note that when using WhatsApp, data may be transferred to third parties outside Switzerland and the EU."
+      data-de="Bitte beachten Sie, dass bei der Nutzung von WhatsApp Daten an Dritte außerhalb der Schweiz und der EU übertragen werden können."
+      data-es="Tenga en cuenta que al utilizar WhatsApp, los datos pueden transferirse a terceros fuera de Suiza y la UE."
+      data-ru="Обратите внимание, что при использовании WhatsApp данные могут передаваться третьим лицам за пределы Швейцарии и ЕС."
+      data-uk="Зверніть увагу, що при використанні WhatsApp дані можуть передаватися третім особам за межі Швейцарії та ЄС.">
+    </p>
+
+    <p
+      data-en="Our hosting provider may automatically collect technical data such as IP address, browser type, and access times."
+      data-de="Unser Hosting-Anbieter kann automatisch technische Daten wie IP-Adresse, Browsertyp und Zugriffszeiten erfassen."
+      data-es="Nuestro proveedor de hosting puede recopilar automáticamente datos técnicos como la dirección IP, el tipo de navegador y las horas de acceso."
+      data-ru="Наш хостинг-провайдер может автоматически собирать технические данные, такие как IP-адрес, тип браузера и время доступа."
+      data-uk="Наш хостинг-провайдер може автоматично збирати технічні дані, такі як IP-адреса, тип браузера та час доступу.">
+    </p>
+
+    <p
+      data-en="Users have the right to request access, correction, or deletion of their personal data at any time."
+      data-de="Nutzer haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung ihrer personenbezogenen Daten."
+      data-es="Los usuarios tienen derecho a solicitar acceso, corrección o eliminación de sus datos personales en cualquier momento."
+      data-ru="Пользователи имеют право в любое время запросить доступ, исправление или удаление своих персональных данных."
+      data-uk="Користувачі мають право в будь-який час запросити доступ, виправлення або видалення своїх персональних даних.">
+    </p>
+
+<p
+data-en="Personal data is processed based on legitimate interest (communication and business inquiries) and is stored only as long as necessary."
+data-de="Die Verarbeitung erfolgt auf Grundlage berechtigter Interessen (Kommunikation und Geschäftsanfragen) und wird nur so lange gespeichert, wie es erforderlich ist."
+data-es="Los datos personales se procesan sobre la base de un interés legítimo (comunicación y consultas comerciales) y se almacenan únicamente durante el tiempo necesario."
+data-ru="Персональные данные обрабатываются на основании законного интереса (коммуникация и деловые запросы) и хранятся только столько времени, сколько это необходимо."
+data-uk="Персональні дані обробляються на підставі законного інтересу (комунікація та бізнес-запити) і зберігаються лише стільки часу, скільки це необхідно.">
+Personal data is processed based on legitimate interest (communication and business inquiries) and is stored only as long as necessary.
+</p>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button onclick="closePrivacyPopup()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div id="cookieBanner" style="
+position:fixed;
+bottom:0;
+width:100%;
+background:#0b2a4a;
+color:white;
+padding:15px;
+text-align:center;
+z-index:9999;
+">
+<span
+data-en="This website does not use tracking cookies. By using this site, you accept basic technical data processing."
+data-de="Diese Website verwendet keine Tracking-Cookies. Durch die Nutzung akzeptieren Sie die grundlegende Datenverarbeitung."
+data-es="Este sitio web no utiliza cookies de seguimiento. Al usarlo, acepta el procesamiento básico de datos."
+data-ru="Этот сайт не использует отслеживающие cookie. Используя сайт, вы соглашаетесь с базовой обработкой данных."
+data-uk="Цей сайт не використовує файли cookie для відстеження. Використовуючи сайт, ви погоджуєтесь на базову обробку даних.">
+This website does not use tracking cookies...
+</span>
+
+<button onclick="document.getElementById('cookieBanner').style.display='none'">
+  OK
+</button>
+</div>
+<div id="productPopup" class="lightbox">
+  <span class="close" onclick="closeProductPopup()">×</span>
+
+  <div class="popup-box">
+   
+    <h3 style="margin-top:15px;"></h3>
+
+    <p>
+      Detailed product description coming soon.
+    </p>
+  </div>
+</div>
+</script>
+
+</body>
+</html>
